@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Splash from './screens/splash';
 import SignUp from './screens/signUp';
 import Login from './screens/login';
+import PersonalProfile from './screens/profile';
 
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
 
   return (
     <View>
-      <Login/>
+      <PersonalProfile/>
     </View>
     
       

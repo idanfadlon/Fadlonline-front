@@ -5,13 +5,13 @@ import styled from "styled-components/native"
 import { Container } from "../components/shared"
 import splashImg from '../assets/fadlonlineSplash.png'
 
+//TODO: show for 3 seconds and move on
+
 const SplashContainer = styled(Container)`
   width: 100%;
   height: 100%;
   
 `;
-
-
 
 const Splash:FunctionComponent = () =>{
     return(

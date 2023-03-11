@@ -1,22 +1,15 @@
 import React, { FunctionComponent} from "react";
 import { View, StyleSheet, TextInput,TouchableOpacity} from "react-native";
-// import styled from "styled-components/native";
-import { colors } from "../components/colors";
 
-// import { Container } from "../components/shared";
+//my components
+import { colors } from "../components/colors";
 import LogoText from "../components/text/logoText";
 import BoldText from "../components/text/boldText";
 import RegularText from "../components/text/regularText";
 import SemiBoldText from "../components/text/semiBoldText";
 
 
-// const SignUpContainer = styled(Container)`
-//     background-color:${colors.primary};
-//     width: 100%;
-//     height: 100%;
-//     flex: 1;
-
-// `;
+//TODO: implement funcionality
 
 const SignUpButtonPress = () =>{
     console.log("signup click")

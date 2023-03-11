@@ -9,7 +9,7 @@ const MediumTextStyle = styled.Text`
   
 `;
 
-const mediumText:FunctionComponent<textProps> = (props)=>{
+const MediumText:FunctionComponent<textProps> = (props)=>{
     return <MediumTextStyle style={props.textStyles}> {props.children}</MediumTextStyle>
 }
-export default mediumText
+export default MediumText
