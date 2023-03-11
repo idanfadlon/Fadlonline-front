@@ -1,32 +1,32 @@
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
 import { StyleSheet, Text, View } from 'react-native';
-import Splash from './components/splash';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import Splash from './screens/splash';
+import SignUp from './screens/signUp';
+import Login from './screens/login';
+
 
 const App = () => {
-  useEffect(() => {
-    async function hideSplashScreen() {
-      await SplashScreen.preventAutoHideAsync();
-      // Simulate a heavy load task
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-      await SplashScreen.hideAsync();
-    }
-    hideSplashScreen();
-  }, []);
+  let [fontsLoads] = useFonts({
+    "Baloo2-Bold": require("./assets/fonts/Baloo2-Bold.ttf"),
+    "Baloo2-Medium": require("./assets/fonts/Baloo2-Medium.ttf"),
+    "Baloo2-Regular": require("./assets/fonts/Baloo2-Regular.ttf"),
+    "Baloo2-SemiBold": require("./assets/fonts/Baloo2-SemiBold.ttf"),
+    "LeckerliOne-Regular": require("./assets/fonts/LeckerliOne-Regular.ttf"),
+  })
+  if(!fontsLoads){
+    return <AppLoading/>
+  }
 
   return (
     <View>
-      <Splash/>
+      <Login/>
     </View>
+    
+      
     
   );
 }
 export default App
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+
+
